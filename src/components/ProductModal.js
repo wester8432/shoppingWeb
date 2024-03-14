@@ -132,22 +132,37 @@ export default function ProductModal({
                 <div className="form-group mb-2">
                   <label className="w-100" htmlFor="customFile">
                     或 上傳圖片
-                    <input
+                    <form
+                      action={`/v2/api/${process.env.REACT_APP_API_PATH}/admin/upload`}
+                      encType="multipart/form-data"
+                      method="post"
+                    >
+                      <input
+                        type="file"
+                        name="file-to-upload"
+                        onChange={(event) => {
+                          const object = {};
+                          const fd = new FormData();
+                          let file = event.target.files[0];
+                          fd.append("image", file);
+                          fd.forEach((value, key) => {
+                            object[key] = value;
+                          });
+                          console.log("upload", object);
+                        }}
+                      />
+                      <input type="submit" value="Upload" />
+                    </form>
+                    {/* <input
                       type="file"
                       id="customFile"
                       className="form-control"
                       onChange={(event) => {
                         console.log("上傳資料", event.target.files[0]);
-                      }}
-                      // value={tempData.imageUrl}
-
-                      // data-target="file-uploader"
-                      // accept="image/*"
-                      // multiple="multiple"
-                    />
+                      }} */}
                   </label>
                 </div>
-                <img src="" alt="" className="img-fluid" />
+                <img src={tempData.imageUrl} alt="" className="img-fluid" />
               </div>
               <div className="col-sm-8">
                 <div className="form-group mb-2">
