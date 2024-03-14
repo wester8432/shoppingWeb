@@ -12,7 +12,8 @@ export default function ProductModal({
   type,
   tempProduct,
 }) {
-  const [message, dispatch] = useContext(MessageContext);
+  const [, dispatch] = useContext(MessageContext);
+  //空的產品MODAL
   const [tempData, setTempData] = useState({
     title: "",
     category: "",
@@ -26,6 +27,7 @@ export default function ProductModal({
     imagesUrl: [],
   });
 
+  //判斷是新增的MODAL還是編輯的MODAL
   useEffect(() => {
     if (type === "create") {
       setTempData({
@@ -45,6 +47,11 @@ export default function ProductModal({
     }
   }, [type, tempProduct]);
 
+  // const onFileUpload = (event) => {
+  //   console.log(event.target.files[0]);
+  // };
+
+  //更改產品資訊
   const tempDataChange = (event) => {
     const { name, value } = event.target;
     if (["price", "origin_price"].includes(name)) {
@@ -109,7 +116,7 @@ export default function ProductModal({
             <div className="row">
               <div className="col-sm-4">
                 <div className="form-group mb-2">
-                  <label className="w-100" htmlFor="image">
+                  <label className="w-100" htmlFor="imageUrl">
                     輸入圖片網址
                     <input
                       type="text"
@@ -117,6 +124,8 @@ export default function ProductModal({
                       id="image"
                       placeholder="請輸入圖片連結"
                       className="form-control"
+                      value={tempData.imageUrl}
+                      onChange={tempDataChange}
                     />
                   </label>
                 </div>
@@ -127,6 +136,14 @@ export default function ProductModal({
                       type="file"
                       id="customFile"
                       className="form-control"
+                      onChange={(event) => {
+                        console.log("上傳資料", event.target.files[0]);
+                      }}
+                      // value={tempData.imageUrl}
+
+                      // data-target="file-uploader"
+                      // accept="image/*"
+                      // multiple="multiple"
                     />
                   </label>
                 </div>

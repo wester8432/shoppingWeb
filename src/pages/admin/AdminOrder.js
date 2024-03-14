@@ -8,7 +8,7 @@ export default function AdminOrders() {
   const [orders, setOrders] = useState([]);
   const [pagination, setPagination] = useState({});
   // type: 決定 modal 展開的用途
-  const [type, setType] = useState("create"); // edit
+  // const [type, setType] = useState("create"); // edit
   const [tempOrder, setTempOrder] = useState({});
 
   const orderModal = useRef(null);

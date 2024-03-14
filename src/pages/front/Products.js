@@ -31,27 +31,23 @@ export default function Products() {
         <div className="row">
           {products.map((product) => {
             return (
-              <>
-                <div className="col-md-3" key={product.id}>
-                  <div className="card border-0 mb-4 position-relative position-relative">
-                    <img
-                      src={product.imageUrl}
-                      className="card-img-top rounded-0 objectFit"
-                      alt="..."
-                      height="300px"
-                    />
-                    <div className="card-body p-0">
-                      <h4 className="mb-0 mt-3">
-                        <Link to={`/product/${product.id}`}>
-                          {product.title}
-                        </Link>
-                      </h4>
+              <div className="col-md-3" key={product.id}>
+                <div className="card border-0 mb-4 position-relative position-relative">
+                  <img
+                    src={product.imageUrl}
+                    className="card-img-top rounded-0 objectFit"
+                    alt="..."
+                    height="300px"
+                  />
+                  <div className="card-body p-0">
+                    <h4 className="mb-0 mt-3">
+                      <Link to={`/product/${product.id}`}>{product.title}</Link>
+                    </h4>
 
-                      <p className="text-muted mt-3">NT${product.price}</p>
-                    </div>
+                    <p className="text-muted mt-3">NT${product.price}</p>
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

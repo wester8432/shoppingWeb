@@ -8,7 +8,7 @@ export default function Cart() {
   const [loadingItems, setLoadingItems] = useState([]);
   const removeCartItem = async (id) => {
     try {
-      const res = await axios.delete(
+      await axios.delete(
         `/v2/api/${process.env.REACT_APP_API_PATH}/cart/${id}`
       );
       getCart();

@@ -14,7 +14,13 @@ import Success from "./pages/front/Success";
 
 function App() {
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        backgroundImage:
+          "url(https://i.pinimg.com/564x/5d/62/8e/5d628ee3a03b36749a8b433e0dea883a.jpg)",
+      }}
+    >
       <Routes>
         <Route path="/" element={<FrontLayout />}>
           <Route path="" element={<Home />} />

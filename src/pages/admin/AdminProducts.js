@@ -54,7 +54,7 @@ export default function AdminProducts() {
 
   const deleteProduct = async (id) => {
     try {
-      const res = await axios.delete(
+      await axios.delete(
         `/v2/api/${process.env.REACT_APP_API_PATH}/admin/product/${id}`
       );
       getProducts();
@@ -104,7 +104,7 @@ export default function AdminProducts() {
             return (
               <tr key={product.id}>
                 <td>{product.category}</td>
-                <td>{product.content}</td>
+                <td>{product.title}</td>
                 <td>{product.price}</td>
                 <td>{product.is_enabled ? "啟用" : "未啟用"}</td>
                 <td>

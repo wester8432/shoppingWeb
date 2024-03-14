@@ -40,6 +40,7 @@ export default function DashBoard() {
   }, [token, navigate]);
 
   return (
+    //用來傳遞成功/失敗的訊息
     <MessageContext.Provider value={reducer}>
       <Message />
       <nav className="navbar navbar-expand-lg bg-dark">
@@ -79,7 +80,7 @@ export default function DashBoard() {
           <ul className="list-group list-group-flush">
             <Link
               className="list-group-item list-group-item-action py-3"
-              to="/admin/Products"
+              to="/admin"
             >
               <i className="bi bi-cup-fill me-2" />
               產品列表

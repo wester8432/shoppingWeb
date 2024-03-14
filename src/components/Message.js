@@ -3,7 +3,7 @@ import { MessageContext } from "../store/messageStore";
 
 export default function Message() {
   //   const [message, setMessage] = useState({});
-  const [message, dispatch] = useContext(MessageContext);
+  const [message] = useContext(MessageContext);
   return (
     <>
       <div

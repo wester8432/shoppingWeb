@@ -5,7 +5,7 @@ export default function Navbar({ cartData }) {
     <>
       <div className="bg-white sticky-top">
         <div className="container">
-          <nav className="navbar px-0 navbar-expand-lg navbar-light bg-white">
+          <nav className="navbar px-0 navbar-expand-lg navbar-light bg-white block  nav-link-hover-color:black">
             <NavLink
               className="navbar-brand position-absolute"
               to="/"
@@ -15,7 +15,7 @@ export default function Navbar({ cartData }) {
                 top: "50%",
               }}
             >
-              N1ro的店鋪
+              N1ro的餐廳
             </NavLink>
             <button
               className="navbar-toggler"
