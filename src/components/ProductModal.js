@@ -91,6 +91,20 @@ export default function ProductModal({
     }
   };
 
+  const fd = new FormData();
+  const imgSubmit = async () => {
+    try {
+      const imgRes = await axios.post(
+        `/v2/api/${process.env.REACT_APP_API_PATH}/admin/upload`,
+        fd
+      );
+      setTempData.imageUrl = imgRes;
+      console.log(imgRes);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div
       className="modal fade"
@@ -133,18 +147,18 @@ export default function ProductModal({
                   <label className="w-100" htmlFor="customFile">
                     或 上傳圖片
                     <form
-                      action={`/v2/api/${process.env.REACT_APP_API_PATH}/admin/upload`}
+                      action="/api/thisismycourse2/admin/upload"
                       encType="multipart/form-data"
                       method="post"
+                      onSubmit={imgSubmit}
                     >
                       <input
                         type="file"
                         name="file-to-upload"
                         onChange={(event) => {
                           const object = {};
-                          const fd = new FormData();
                           let file = event.target.files[0];
-                          fd.append("image", file);
+                          fd.append("file-to-upload", file);
                           fd.forEach((value, key) => {
                             object[key] = value;
                           });
