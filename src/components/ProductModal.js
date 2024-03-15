@@ -91,15 +91,24 @@ export default function ProductModal({
     }
   };
 
-  const fd = new FormData();
-  const imgSubmit = async () => {
+  const [uploadImgUrl, setUploadImgUrl] = useState("");
+  const imgUpload = async (event) => {
+    const fd = new FormData();
+    const object = {};
+    let file = event.target.files[0];
+    fd.append("file-to-upload", file);
+    fd.forEach((value, key) => {
+      object[key] = value;
+    });
+    console.log("upload", object);
+
     try {
       const imgRes = await axios.post(
         `/v2/api/${process.env.REACT_APP_API_PATH}/admin/upload`,
         fd
       );
-      setTempData.imageUrl = imgRes;
-      console.log(imgRes);
+      setUploadImgUrl(imgRes.data.imageUrl);
+      console.log("imgRes", imgRes);
     } catch (error) {
       console.log(error);
     }
@@ -147,23 +156,17 @@ export default function ProductModal({
                   <label className="w-100" htmlFor="customFile">
                     或 上傳圖片
                     <form
-                      action="/api/thisismycourse2/admin/upload"
+                      action={`/v2/api/${process.env.REACT_APP_API_PATH}/admin/upload`}
                       encType="multipart/form-data"
                       method="post"
-                      onSubmit={imgSubmit}
+                      onSubmit={() => {
+                        setTempData.imageUrl(uploadImgUrl);
+                      }}
                     >
                       <input
                         type="file"
                         name="file-to-upload"
-                        onChange={(event) => {
-                          const object = {};
-                          let file = event.target.files[0];
-                          fd.append("file-to-upload", file);
-                          fd.forEach((value, key) => {
-                            object[key] = value;
-                          });
-                          console.log("upload", object);
-                        }}
+                        onChange={imgUpload}
                       />
                       <input type="submit" value="Upload" />
                     </form>
