@@ -33,7 +33,7 @@ export default function SwiperImg() {
             <img
               src="https://i.imgur.com/6zWwEaf.png"
               className="d-block w-100"
-              height="800px"
+              height="600px"
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block">
@@ -42,7 +42,7 @@ export default function SwiperImg() {
           </div>
           <div className="carousel-item active">
             <img
-              height="800px"
+              height="600px"
               src="https://cdn.esence.travel/%E6%9C%AC%E8%B3%AA%E6%97%85%E8%A1%8C/%E6%9C%AC%E8%B3%AA%E6%97%85%E8%A1%8C-%E6%95%85%E4%BA%8B%E6%96%87%E7%AB%A0%E9%A6%96%E5%9C%96-1200737-1-5.png"
               className="d-block -100 objectFit"
               alt="..."
@@ -53,7 +53,7 @@ export default function SwiperImg() {
           </div>
           <div className="carousel-item active">
             <img
-              height="800px"
+              height="600px"
               src="https://i.pinimg.com/564x/04/dd/e2/04dde285b059b8cd0cf7267a62163bed.jpg"
               className="d-block w-100 objectFit"
               alt="..."
