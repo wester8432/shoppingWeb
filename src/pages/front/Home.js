@@ -31,9 +31,9 @@ export default function Home() {
               alt="..."
             />
           </div> */}
-          <div className="col d-flex flex-column justify-content-center mt-md-0 mt-3">
+          {/* <div className="col d-flex flex-column justify-content-center mt-md-0 mt-3">
             <h5 className="font-weight-normal text-muted mt-2"></h5>
-            {/* <div className="input-group mb-0 mt-4">
+            <div className="input-group mb-0 mt-4">
               <div className="input-group-append">
                 <button
                   className="btn btn-dark rounded-0"
@@ -43,7 +43,84 @@ export default function Home() {
                   Lorem ipsum
                 </button>
               </div> 
-            </div> */}
+            </div>
+          </div> */}
+          <div className="row pt-5">
+            <div
+              className="card col-md-4 border-0"
+              style={{
+                backgroundColor: "transparent",
+              }}
+            >
+              <img
+                src="https://i.pinimg.com/564x/38/5a/9c/385a9c896e0e9de2e4bc72db3027827e.jpg"
+                className="card-img-top homeImg objectFit"
+                alt="..."
+                height="600px"
+              />
+              <div className="card-body">
+                <h2 className="card-title text-center">尊榮環境，視覺享受！</h2>
+                <h5 className="card-text text-center">
+                  幸福團聚時刻，溫馨的用餐環境。將燈光、裝潢做到最好，讓顧客能以最舒適的心情體驗生活。
+                </h5>
+              </div>
+            </div>
+            <div
+              className="card col-md-4 border-0"
+              style={{
+                backgroundColor: "transparent",
+              }}
+            >
+              <img
+                src="https://i.pinimg.com/564x/70/e8/d0/70e8d09d3d1612f5daaea9bd1b2e8165.jpg"
+                className="card-img-top homeImg objectFit"
+                alt="..."
+                height="600px"
+              />
+              <div className="card-body">
+                <h2 className="card-title text-center">用心料理，味覺饗宴 !</h2>{" "}
+                <h5 className="card-text text-center">
+                  我們將美味重新定義，打造貼心服務與美味食物的對話環境，感受不僅只限於舌尖，熱情燃起美味炙燒，徜徉味覺與視覺的尊榮享受。
+                </h5>
+              </div>
+            </div>
+            <div
+              className="card col-md-4 border-0"
+              style={{
+                backgroundColor: "transparent",
+              }}
+            >
+              <img
+                src="https://i.pinimg.com/564x/f8/6c/8a/f86c8a31f41c0469f08eefd0330b14df.jpg"
+                className="card-img-top homeImg objectFit"
+                alt="..."
+                height="600px"
+              />
+              <div className="card-body">
+                <h2 className="card-title text-center">貼心服務，專屬幸福！</h2>{" "}
+                <h5 className="card-text text-center">
+                  貼心服務！將人力發揮最高價值提供精緻又有溫度的服務，用「幸福感」打入您的心房。
+                </h5>
+              </div>
+            </div>
+            <div
+              className="card border-0 "
+              style={{
+                backgroundColor: "transparent",
+              }}
+            >
+              <img
+                src=" https://i.pinimg.com/564x/3a/df/67/3adf67dad3f809a7ae355c5e9ec96f45.jpg"
+                className="card-img-top"
+                alt="..."
+              />
+              <div className="card-body">
+                <h3 className="card-text text-center">
+                  新鮮嚴選食材，臺灣在地小農稻米、蔬果品質認證！
+                  每日新鮮海產，品質保證讓您吃的安心！
+                </h3>
+              </div>
+            </div>
           </div>
         </div>
         {/* <div className="row mt-5">

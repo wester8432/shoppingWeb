@@ -28,7 +28,8 @@ export default function FrontLayout() {
       <div className="bg-dark">
         <div className="container">
           <div className="d-flex align-items-center justify-content-between text-white py-4">
-            <p className="mb-0">版權所有</p>
+            <p className="mb-0">作品僅為練習，無商業使用</p>
+            <p className="mb-0">點我登入後台</p>
           </div>
         </div>
       </div>

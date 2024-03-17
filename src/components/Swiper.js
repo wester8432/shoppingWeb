@@ -37,35 +37,29 @@ export default function SwiperImg() {
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block">
-              <h1 style={{ color: "red" }}>慶開幕單筆訂單打8折</h1>
+              <h2 style={{ color: "light" }}>慶開幕單筆訂單打8折</h2>
             </div>
           </div>
           <div className="carousel-item active">
             <img
               height="800px"
-              src="https://plus.unsplash.com/premium_photo-1675616563084-63d1f129623d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D"
-              className="d-block w-100 objectFit"
+              src="https://cdn.esence.travel/%E6%9C%AC%E8%B3%AA%E6%97%85%E8%A1%8C/%E6%9C%AC%E8%B3%AA%E6%97%85%E8%A1%8C-%E6%95%85%E4%BA%8B%E6%96%87%E7%AB%A0%E9%A6%96%E5%9C%96-1200737-1-5.png"
+              className="d-block -100 objectFit"
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
+              <h2>職人精神，立即品嘗</h2>
             </div>
           </div>
           <div className="carousel-item active">
             <img
-              height="500px"
-              src="https://plus.unsplash.com/premium_photo-1704478482577-59f62fa5c9cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8"
+              height="800px"
+              src="https://i.pinimg.com/564x/04/dd/e2/04dde285b059b8cd0cf7267a62163bed.jpg"
               className="d-block w-100 objectFit"
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
+              <h2>在台灣品嚐日本的味道</h2>
             </div>
           </div>
         </div>

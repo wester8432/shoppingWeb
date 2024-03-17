@@ -94,21 +94,23 @@ export default function ProductModal({
   const [uploadImgUrl, setUploadImgUrl] = useState("");
   const imgUpload = async (event) => {
     const fd = new FormData();
-    const object = {};
+    // const object = {};
     let file = event.target.files[0];
     fd.append("file-to-upload", file);
-    fd.forEach((value, key) => {
-      object[key] = value;
-    });
-    console.log("upload", object);
+    // fd.forEach((value, key) => {
+    //   object[key] = value;
+    // });
+    // console.log("upload", object);
 
     try {
       const imgRes = await axios.post(
         `/v2/api/${process.env.REACT_APP_API_PATH}/admin/upload`,
         fd
       );
-      setUploadImgUrl(imgRes.data.imageUrl);
+      let imgUrl = imgRes.data.imageUrl;
+      setUploadImgUrl(imgUrl);
       console.log("imgRes", imgRes);
+      console.log("uploadImgUrl", imgUrl);
     } catch (error) {
       console.log(error);
     }

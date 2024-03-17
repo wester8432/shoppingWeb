@@ -26,25 +26,24 @@ export default function Products() {
   }, []);
   return (
     <>
-      <div className="container mt-md-5 mt-3 mb-7">
+      <div className="container mt-md-5 mt-3 mb-7 ">
         <Loading isLoading={isLoading} />
         <div className="row">
           {products.map((product) => {
             return (
               <div className="col-md-3" key={product.id}>
-                <div className="card border-0 mb-4 position-relative position-relative">
+                <div className="card border-0 mb-4 position-relative position-relative bg-light">
                   <img
                     src={product.imageUrl}
-                    className="card-img-top rounded-0 objectFit"
+                    className="card-img-top rounded-0 objectFit "
                     alt="..."
                     height="300px"
                   />
                   <div className="card-body p-0">
-                    <h4 className="mb-0 mt-3">
+                    <h4 className="mb-0 mt-3 text-start">
                       <Link to={`/product/${product.id}`}>{product.title}</Link>
+                      <span className="float-end">NT${product.price}</span>
                     </h4>
-
-                    <p className="text-muted mt-3">NT${product.price}</p>
                   </div>
                 </div>
               </div>
