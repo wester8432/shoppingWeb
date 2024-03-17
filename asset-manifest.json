@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/shoppingWeb/static/css/main.32836bbe.css",
-    "main.js": "/shoppingWeb/static/js/main.5ee4b6de.js",
+    "main.css": "/shoppingWeb/static/css/main.6502e762.css",
+    "main.js": "/shoppingWeb/static/js/main.95b6f6ea.js",
     "static/js/453.0d3404bd.chunk.js": "/shoppingWeb/static/js/453.0d3404bd.chunk.js",
     "static/media/bootstrap-icons.woff?": "/shoppingWeb/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/shoppingWeb/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "index.html": "/shoppingWeb/index.html",
-    "main.32836bbe.css.map": "/shoppingWeb/static/css/main.32836bbe.css.map",
-    "main.5ee4b6de.js.map": "/shoppingWeb/static/js/main.5ee4b6de.js.map",
+    "main.6502e762.css.map": "/shoppingWeb/static/css/main.6502e762.css.map",
+    "main.95b6f6ea.js.map": "/shoppingWeb/static/js/main.95b6f6ea.js.map",
     "453.0d3404bd.chunk.js.map": "/shoppingWeb/static/js/453.0d3404bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.32836bbe.css",
-    "static/js/main.5ee4b6de.js"
+    "static/css/main.6502e762.css",
+    "static/js/main.95b6f6ea.js"
   ]
 }
