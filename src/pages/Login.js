@@ -20,7 +20,7 @@ export default function Login() {
       const { token, expired } = res.data;
 
       //儲存token
-      document.cookie = `SixCornerToken=${token}; expires=${new Date(expired)}`;
+      document.cookie = `CookieToken=${token}; expires=${new Date(expired)}`;
 
       if (res.data.success) {
         navigate("/admin");

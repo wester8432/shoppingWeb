@@ -13,13 +13,13 @@ export default function DashBoard() {
   const reducer = useReducer(messageReducer, initState);
 
   const logout = () => {
-    document.cookie = "SixCornerToken=;";
+    document.cookie = "CookieToken=;";
     navigate("/Login");
   };
 
   //取出token
   const token = document.cookie.replace(
-    /(?:(?:^|.*;\s*)SixCornerToken\s*\=\s*([^;]*).*$)|^.*$/,
+    /(?:(?:^|.*;\s*)CookieToken\s*\=\s*([^;]*).*$)|^.*$/,
     "$1"
   );
   axios.defaults.headers.common["Authorization"] = token;

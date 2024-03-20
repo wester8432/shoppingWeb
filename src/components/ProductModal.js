@@ -108,7 +108,10 @@ export default function ProductModal({
         fd
       );
       let imgUrl = imgRes.data.imageUrl;
-      setUploadImgUrl(imgUrl);
+      setTempData({
+        ...tempData,
+        imageUrl: imgUrl,
+      });
       console.log("imgRes", imgRes);
       console.log("uploadImgUrl", imgUrl);
     } catch (error) {
@@ -161,16 +164,13 @@ export default function ProductModal({
                       action={`/v2/api/${process.env.REACT_APP_API_PATH}/admin/upload`}
                       encType="multipart/form-data"
                       method="post"
-                      onSubmit={() => {
-                        setTempData.imageUrl(uploadImgUrl);
-                      }}
                     >
                       <input
                         type="file"
                         name="file-to-upload"
                         onChange={imgUpload}
                       />
-                      <input type="submit" value="Upload" />
+                      {/* <input type="submit" value="Upload" /> */}
                     </form>
                     {/* <input
                       type="file"
