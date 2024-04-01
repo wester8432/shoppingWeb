@@ -2,10 +2,13 @@ import { useOutletContext, Link } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import { isDisabled } from "@testing-library/user-event/dist/utils";
+import { useDispatch } from "react-redux";
+import { createAsyncMessage } from "../../slice/messageSlice";
 
 export default function Cart() {
   const { cartData, getCart } = useOutletContext();
   const [loadingItems, setLoadingItems] = useState([]);
+  const dispatch = useDispatch();
   const removeCartItem = async (id) => {
     try {
       await axios.delete(
@@ -35,8 +38,10 @@ export default function Cart() {
         loadingItems.filter((loadingObject) => loadingObject !== item.id)
       );
       getCart();
+      dispatch(createAsyncMessage(res.data));
     } catch (error) {
       console.log(error);
+      dispatch(createAsyncMessage(error.response.data));
     }
   };
 

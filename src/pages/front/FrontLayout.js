@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import Navbar from "../../components/Navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import MessageToast from "../../components/MessageToast";
 export default function FrontLayout() {
   const [cartData, setCartData] = useState({});
 
@@ -24,6 +25,7 @@ export default function FrontLayout() {
   return (
     <>
       <Navbar cartData={cartData} />
+      <MessageToast />
       <Outlet context={{ getCart, cartData }}></Outlet>
       <div className="bg-dark">
         <div className="container">
